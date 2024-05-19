@@ -71,6 +71,27 @@
     font-size: 50px;
   }
 
+  .program h4 {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+
+  .school h4 {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+
+  .others h4 {
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+
   .school {
     display: block;
     width: 60%;
