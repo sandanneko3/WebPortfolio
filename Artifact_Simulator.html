@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Artifact_Simulator.css">
+    </head>
+    <body>
+        <nav>
+            <h2 class="logo">PORTFOLIO</h2>
+            <ul>
+              <li><a href="WebPortfolio.html">HOME</a></li>
+              <li><a href="portfolio.html">取り組み</a></li>
+              <li><a href="Artifact_Simulator.html">シミュレータ</a></li>
+            </ul>
+          </nav>
+
+        <div class="container">
+            <div class="simulator_container">
+                <h1 id="title">Artifact Simulator</h1>
+                <div class="Artifact_container">
+                    <h2 id="Artifact_Part">Part</h2>
+                    <h3 id="Artifact_Main">Main Status</h3>
+                    <h3 id="Main_Value">0</h3>
+                    <h3 id="Artifact_Level">+0</h3>
+                    <div class="sub_container">
+                        <ul class="sub_list">
+                            <li id="sub0">Sub Status</li>
+                            <li id="sub1">Sub Status</li>
+                            <li id="sub2">Sub Status</li>
+                            <li id="sub3">Sub Status</li>
+                        </ul>
+                        <ul class="sub_value">
+                            <li id="value0">Value</li>
+                            <li id="value1">Value</li>
+                            <li id="value2">Value</li>
+                            <li id="value3">Value</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="display_score">
+                    <h3 id="Artifact_Score">0.0</h3>
+                    <button type="button" id="reload_button"></button>
+                </div>
+                <div class="button_container">
+                    <button type="button" id="start_button">START</button>
+                    <button type="button" id="enhance_button">Level UP</button>
+                </div>
+            </div>
+
+            <div class="setting_container">
+                <h1 id="title">Setting</h1>
+                <div class="setting">
+                    <div class="artifact_part">
+                        <h3>部位の指定</h3>
+                        <form id="artifact_part">
+                            <label>
+                                <input type="checkbox" name="flower" value="0" checked/> 花
+                            </label>
+                            <label>
+                                <input type="checkbox" name="plume" value="1" checked/> 羽
+                            </label>
+                            <label>
+                                <input type="checkbox" name="sands" value="2" checked/> 時計
+                            </label>
+                            <label>
+                                <input type="checkbox" name="goblet" value="3" checked/> 杯
+                            </label>
+                            <label>
+                                <input type="checkbox" name="circlet" value="4" checked/> 冠
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="score_element">
+                        <h3>スコアに含む要素</h3>
+                        <form id="score_element">
+                            <label>
+                                <input type="checkbox" name="ATK" value="1" checked /> 攻撃力％
+                            </label>
+                            <label>
+                                <input type="checkbox" name="HP" value="1" /> H P％
+                            </label>
+                            <label>
+                                <input type="checkbox" name="EM" value="1" /> 元素熟知
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="levelup">
+                        <h3>強化方法</h3>
+                        <form id="levelup">
+                            <label>
+                                <input type="radio" name="level_up" value="1" id="4up" checked/> 4Lvずつ強化<br />
+                            </label>
+                            <label>
+                                <input type="radio" name="level_up" value="1" id="20up"/> 最大レベルまで強化<br />
+                            </label>
+                            <label>
+                                <input type="radio" name="level_up" value="1" id="stop4op"/> 4opから最大まで強化<br />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="Artifact_Simulator.js"></script>
+    </body>
+</html>

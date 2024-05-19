@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  <link rel="stylesheet" href="Style_home.css">
+</head>
+<body>
+  <nav>
+    <h2 class="logo">PORTFOLIO</h2>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="portfolio.html">取り組み</a></li>
+      <li><a href="Artifact_Simulator.html">シミュレータ</a></li>
+    </ul>
+  </nav>
+
+  <div class="profile">
+    <h2>自己紹介</h2>
+    <div class="container">
+      <img src="img/icon_art.png" alt="My face!">
+      <div class="text">
+        <div class="name">
+          <h1>小野 誠秀</h1>
+          <h5>ONO MASAYOSHI</h5>
+        </div>
+        <div class="info">
+          <p>国立熊本高等専門学校 熊本キャンパス</p>
+          <p>制御情報システム工学科 ５年</p>
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button id="profile_button">詳細</button>
+    </div>
+  </div>
+
+  <div id="details" class="hidden">
+    <p>自己紹介の詳細です</p>
+  </div>
+  <script src="button-script.js"></script>
+
+  <div class="portfolio">
+    <div class="title">
+      <h2>ポートフォリオ</h2>
+    </div>
+
+    <div class="box">
+      <div class="card">
+        <h5>プログラミング</h5>
+        <img src="img/Program.png" alt="100" class="image">
+        <a href="portfolio.html" class="button">もっと読む</a>
+      </div>
+
+      <div class="card">
+        <h5>学内活動</h5>
+        <img src="img/kosen.png" alt="kosen" class="image">
+        <a href="portfolio.html#school" class="button">もっと読む</a>
+      </div>
+
+      <div class="card">
+        <h5>その他</h5>
+        <img src="img/my_pc.png" alt="pasokon" class="image">
+        <a href="portfolio.html#others" class="button">もっと読む</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

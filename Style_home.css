@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(45deg, white, rgb(152, 152, 152));
+  }
+
+  nav {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .logo {
+    color: white;
+    background-color: rgb(0, 50, 0);
+    width: 100%;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    background-color: black;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+  nav ul li a:hover{
+    color: rgb(0, 175, 0);
+  }
+
+  .profile {
+    display: block;
+    width: 70%;
+    margin: 30px auto;
+    border-radius: 50px;
+    background-color: rgb(70, 70, 70);
+    padding: 30px 0 10px 0;
+  }
+
+  .profile h2 {
+    color: white;
+    align-items: center;
+    padding: 5px 25px 5px 50px;
+    font-size: 50px;
+  }
+
+  .profile .container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .profile img {
+    width: 300px;
+    height: auto;
+    transition: 0.3s;
+  }
+
+  .profile img:hover {
+    transform: scale(1.1);
+  }
+
+  .profile .text {
+    color: white;
+    padding: 0 50px;
+    align-content: center;
+  }
+
+  .profile .name {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  .name h1 {
+    font-size: 50px;
+  }
+
+  .profile .info {
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #profile_button {
+    width: 90%;
+    height: 100%;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: none;
+  }
+
+  #profile_button:hover {
+    color: rgb(0, 175, 0);
+    transform: scaleY(1.1);
+  }
+
+  #details {
+    background-color: green;
+    transition: 0.4s;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .portfolio {
+    background: linear-gradient(50deg, rgb(0, 0, 0), rgb(50, 50, 50));
+    display: block;
+    padding: 30px 0;
+  }
+
+  .portfolio .title h2{
+    color: white;
+    align-items: center;
+    padding: 5px 25px 5px 50px;
+    font-size: 50px;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: 10px 10px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    border-radius: 20px;
+    min-width: 200px;
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: 1s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card h5 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 15px;
+  }
+
+  .card .image {
+    max-width: 90%;
+    max-height: 200px;
+    margin: 10px auto;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .card .button {
+    width: 50%;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+  }
+
+  .card .button:hover {
+    background-color: rgb(0, 175, 0);
+    transform: scale(1.1);
+  }

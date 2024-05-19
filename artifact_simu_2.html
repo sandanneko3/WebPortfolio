@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ内容</title>
+  <link rel="stylesheet" href="artifact_simu_2.css">
+</head>
+<body>
+    <nav>
+        <h2 class="logo">PORTFOLIO</h2>
+        <ul>
+          <li><a href="WebPortfolio.html">HOME</a></li>
+          <li><a href="portfolio.html">取り組み</a></li>
+          <li><a href="Artifact_Simulator.html">シミュレータ</a></li>
+        </ul>
+      </nav>
+
+    <div class="artifact_simu">
+        <h1 class="title">Artifact Simulator【JavaScript】</h1>
+        <div class="summary">
+            <h2>概要</h2>
+            <div class="text">
+                <p>miHoYoの提供する「原神」というゲームにおける、聖遺物という要素のシミュレーションおよびスコアの計算を行うプログラム。</p>
+                <p>2023年にPythonで作成したプログラムを基盤とし、JavaScriptを用いて作成した。</p>
+                <p>実際の動作は上の「シミュレータ」から確認可能。</p>
+                <button id="artifact_button">聖遺物について知る</button>
+                <div id="artifact" class="hidden">
+                    <div class="whatartifact">
+                        <h5>聖遺物とは</h5>
+                        <p>ゲーム「原神」内に出てくるアイテムであり、プレイヤーは時間経過によって溜まる素材を消費することによって聖遺物を獲得することができる。</p>
+                        <p>聖遺物にはメインステータスとサブステータスがあり、それらはある一定の法則に従ってランダムに選ばれる。</p>
+                        <p>キャラクターの強さに大きく影響する聖遺物の厳選は、プレイヤーにとって必須の作業であるとともにやりこみ要素の一つでもある。</p>
+                        <img src="img/artifact_info.png" alt="60.4!?">
+                        <h5>スコアとは</h5>
+                        <p>プレイヤー間で生まれた共通認識であり、聖遺物の強さを表す指標となっている。</p>
+                        <p>「会心率×２＋会心ダメージ＋攻撃％」が主流であったが最近は攻撃％の代わりにHP％や元素熟知という値を含むこともある。</p>
+                    </div>
+                </div>
+                <script src="artifact_simu_2.js"></script>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2>機能</h2>
+            <ul>
+                <li>聖遺物を作成し、それぞれの要素とスコアを表示する。</li>
+                <li>新たな聖遺物を作成、または強化を行う。</li>
+                <li>シミュレートする部分やスコアの計算方法などの設定が可能。</li>
+            </ul>
+        </div>
+
+        <div class="flowchart">
+            <h2>プログラムの流れ</h2>
+            <div class="whole">
+                <h5>全体の流れ</h5>
+                <div class="info">
+                    <img src="img/flowchart.png" alt="">
+                    <div class="text">
+                        <p>「START」が押されたら聖遺物の作成を行う。「Level UP」が押されたら聖遺物の強化を行う。</p>
+                        <p>この二つの動作のどちらかを繰り返すだけ。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create">
+                <h5>聖遺物作成</h5>
+                <div class="info">
+                    <img src="img/flowchart_create.png" alt="">
+                    <div class="text">
+                        <p>＜部位の決定＞：設定で指定された部位の中からランダムに選出</p>
+                        <p>＜メインステータスの付与＞：部位にあったメインステータスを付与、確率は部位によって変動</p>
+                        <p>＜初期オプション数の決定＞：サブステータスが初めから付く個数を決定（３ or ４）</p>
+                        <p>＜サブステータス＆値の付与＞：メインステータスとの被りなし、かつ他のサブステータスとも重複しないものを初期オプション数だけ付与。それぞれのステータスごとに確率が割り振られている。
+                            サブステータスの値は４つの段階から選ばれる。表示されるのは小数点第１位までだが、小数点第２位以下の値も存在する。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="levelup">
+                <h5>聖遺物強化</h5>
+                <div class="info">
+                    <img src="img/flowchart_levelup.png" alt="">
+                    <div class="text">
+                        <p>初期オプション数によって初めの動作が変化する。</p>
+                        <p>＜初期が３の時＞：サブステータスを一つ追加し、初めに戻る。</p>
+                        <p>＜初期が４の時＞：サブステータスの値を一つ強化する。</p>
+                        <p>これらの動作をするたびにレベルを4増加させ、20レベル以降は強化できない。</p>
+                        <p>＜設定が4Lvずつ強化＞：上記の動作をするたびにボタンの入力を待つ。</p>
+                        <p>＜設定が20Lvまで強化＞：上記の動作を20レベルになるまで繰り返す。</p>
+                        <p>＜4opから20Lvまで強化＞：初期が３の時はサブステータスを追加してから、初期が４の場合はそのまま20レベルまで繰り返す。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="screen">
+            <h2>画面操作</h2>
+            <img src="img/screen.png" alt="">
+            <ol>
+                <li>部位の表示</li>
+                <li>メインステータスの表示</li>
+                <li>メインステータスの値の表示：レベルと共に変化</li>
+                <li>レベルの表示：０～２０</li>
+                <li>サブステータスの表示</li>
+                <li>サブステータスの値の表示：強化された場所のみ変化</li>
+                <li>スコアの表示</li>
+                <li>スコアの更新ボタン：スコアに関係する設定を変えた後に押すと設定が反映される</li>
+                <li>スタートボタン：聖遺物の作成</li>
+                <li>強化ボタン：聖遺物の強化</li>
+                <li>部位の設定：出現する部位を指定する</li>
+                <li>スコアに含む要素：チェックマークを付けた要素がスコアに含まれる</li>
+                <li>強化方法：それぞれの強化方法を選ぶ</li>
+            </ol>
+        </div>
+    </div>
+</body>
